@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>website</title>
+</head>
+<body>
+    <h1>กรุณาเลือกรายการ </h1>
+    <h2>
+    <a href= "{{ url_for('form_sender', name_token=name_token) }}">ผู้ส่ง</a>
+<!--    <a href="/sender/{{ name_token }}">ผู้ส่ง</a>-->
+    <br>
+<!--    <a href= "{{ url_for('form_sender', name_token=name_token) }}">ผู้ส่ง</a>-->
+    <a href= "{{ url_for('form_receiver', name_token=name_token) }}">ผู้รับ</a>
+<!--    <a href="/receiver">ผู้รับ</a>-->
+    </h2>
+</body>
+</html>

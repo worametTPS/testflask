@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>เเบบฟอร์มสำหรับ ส่งของ</title>
+</head>
+<body>
+    <h1>กรุณากรอกข้อมูล</h1>
+    <form action=" {{ url_for('result_sender', name_token=name_token) }}" method="POST">
+        <label for="phonenumber_sender">เบอร์โทรผู้ส่ง</label>
+        <input type="text" name="phonenumber_sender">
+        <br>
+        <label for="name_receiver">ชื่อผู้รับ</label>
+        <input type="text" name="name_receiver">
+        <br>
+        <label for="lastname_receiver">นามสกุลผู้รับ</label>
+        <input type="text" name="lastname_receiver">
+        <br>
+        <label for="phonenumber_receiver">เบอร์โทรผู้รับ</label>
+        <input type="text" name="phonenumber_receiver">
+        <br>
+        <button type="submit">ตกลง</button>
+    </form>
+    <br>
+    <a href= "{{ url_for('index', name_token=name_token) }}">กลับสู่หน้าเเรก</a>
+<!--    <a href="/">กลับสู่หน้าเเรก</a>-->
+</body>
+</html>

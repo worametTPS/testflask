@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>เเบบฟอร์มสำหรับ รับของ</title>
+</head>
+<body>
+    <h1>กรุณากรอกข้อมูล</h1>
+    <form action=" {{ url_for('result_receiver', name_token=name_token) }}" method="POST">
+        <label for="username_receiver">Username</label>
+        <input type="text" name="username_receiver">
+        <br>
+        <label for="name_otp">รหัสรับของ</label>
+        <input type="text" name="name_otp">
+        <br>
+        <label for="phonenumber_receiver">เบอร์โทรผู้รับ</label>
+        <input type="text" name="phonenumber_receiver">
+        <br>
+        <button type="submit">ตกลง</button>
+    </form>
+    <br>
+    <a href= "{{ url_for('index', name_token=name_token) }}">กลับสู่หน้าเเรก</a>
+<!--    <a href="/">กลับสู่หน้าเเรก</a>-->
+</body>
+</html>
